@@ -14,12 +14,14 @@ class Home extends StatelessWidget {
     final todoProvider = context.watch<TodoProvider>();
 
     return Scaffold(
-      appBar: const Header(title: 'Todo App'),
       body: SafeArea(
         child: Container(
           color: Colors.grey.shade300,
           child: Column(
             children: [
+              const Header(
+                title: 'ToDo App',
+              ),
               Expanded(
                 child: ListView.builder(
                   itemCount: todoProvider.items.length,
